@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Local / editor / agent state
+.handoff/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Virtual environments and external runtimes
+.venv/
+venv/
+env/
+tools/
+
+# Model weights / checkpoints
+model_weights/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+
+# Generated outputs / logs
+Generated/
+outputs/
+*.obj
+*.glb
+*.gltf
+*.usd
+*.usdz
+*.turntable.gif
+turntable.gif
+*.log
+
+# Blender source / backup files
+*.blend
+*.blend1
+*.blend2
+
+# Reproducible blueprint dumps
+*_semantic_blueprint.json
+
+# Private / not-yet-cleared research branches
+experiments/semantic_role_t0/
+experiments/semantic_role_t1/
+experiments/vq_part_roundtrip/
+experiments/architecture_inspection/
