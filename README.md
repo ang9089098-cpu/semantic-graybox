@@ -6,6 +6,13 @@ Human-guided structural control for generative 3D asset workflows.
 
 **Status:** research prototype, v0.3.1 baseline.
 
+## Research reports
+
+- **[Korean Research Report (국문)](docs/RESEARCH_PAPER_KO.md)** — design, experiments, limitations, and future work
+- **[English Research Report](docs/RESEARCH_PAPER_EN.md)** — English translation of the preliminary technical report
+
+Both documents are **independent, preliminary technical reports (not peer-reviewed)**. Experimental logs and some third-party or private assets are not included in this public repository; the reports distinguish measured results from proposed future integrations.
+
 Semantic Graybox lets an artist author a low-cost Blender graybox that carries structural intent—semantic part roles, anchors, orientation, relative proportions, repeated-part relationships, and placement slots. The system turns that structure into generator-neutral `GenerationRequest` units, sends them through an external generator adapter, then places generated geometry back into Blender for human review.
 
 ## Pipeline
