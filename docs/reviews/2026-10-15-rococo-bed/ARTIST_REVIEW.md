@@ -33,6 +33,23 @@ The green geometry is the **actual cached Mattress-request output**, even where 
 
 When guides are visible, the grey slab and other grey blocks are the **original source guides**. The grey slab must not be counted as a successfully generated mattress.
 
+## Exact conditioning inputs
+
+The following are the **actual executed inputs for the displayed rococo Trial 01**, checked against the archived command arguments, stdout and frozen request snapshots. Role terms are ordinary text in the prompt; this stock path does not receive a separate part-role token or role embedding. `Back` and `Front` were already overridden to `headboard` and `footboard` before execution; the production `chair backrest` / `front` mappings were not the executed roles in this batch.
+
+| Source unit | Effective role vocabulary | Exact final text prompt | CLI BBox ratio (X, Y, Z) | Normalized model BBox (X, Y, Z) |
+|---|---|---|---|---|
+| `Back` | `headboard` | `A rococo carved headboard for a bed` | `(1.000000, 17.082581, 11.133671)` | `(0.112688, 1.925000, 1.254630)` |
+| `Front` | `footboard` | `A rococo carved footboard for a bed` | `(1.000000, 17.082581, 4.319587)` | `(0.112688, 1.925000, 0.486765)` |
+| `Master_Leg` | `furniture leg` | `A rococo carved furniture leg for a bed` | `(1.052877, 1.000000, 2.809334)` | `(0.721448, 0.685216, 1.925000)` |
+| `Mattress` | `mattress` | `A rococo carved mattress for a bed` | `(6.678850, 3.954680, 1.000000)` | `(1.925000, 1.139831, 0.288223)` |
+
+Ratios use minimum dimension = 1. The CLI converts each vector `r` to `1.925 * r / max(r)` before the model uses it; normalized values above are rounded to six decimals. The model receives CLIP text conditioning plus one BBox size vector. It does **not** receive the guide mesh, a reference image, the complete bed layout, slot coordinates or functional attachment constraints. These BBox values are proportion hints, not clipping boundaries. Common settings here were stock Cube3D v0.5, seed `20261001`, requested/effective `top_p=0.9`, resolution base `8.0`, and fast inference disabled.
+
+**Confirmed prompt-routing issue:** the rule-based prompt builder adds `carved` whenever style text is nonempty, including for `Mattress`. Thus the actual mattress request was `A rococo carved mattress for a bed`; it supplied a carving cue to an upholstered role. All four prompts also contain the parent phrase `for a bed`, and none explicitly says `single` or `isolated`. The runtime has no separate negative-prompt input for this batch.
+
+These input facts expose confounds; they do not establish their causal contribution. Parent-context prompt bleeding, inappropriate carving/style conditioning and a whole-furniture model prior remain distinct hypotheses. The artist observation alone cannot rank them or establish that whole-object bias is intrinsic to the checkpoint.
+
 ## Screenshot evidence
 
 ### 1. Generated outputs without source guides
@@ -74,11 +91,24 @@ The artist's “scaled/deformed” description concerns the resulting appearance
 
 Greyboxes remain references for structural intent, form, scale, and placement. They are not hard containers, and ornamental protrusions are not by themselves a semantic failure.
 
+### Numerical placement context for the shown assembly
+
+The table separates source dimensions, raw generated OBJ extents and the later display transform. Values are `(X, Y, Z)` and rounded to six decimals; guide/placed values use Blender scene units, while raw OBJ extents use generator coordinates. Placed extents are **derived from the archived raw OBJ BBox multiplied by the saved uniform scale**, not evidence of semantic correctness.
+
+| Source unit | Guide dimensions | Raw generated BBox dimensions | Reference axis / BBox face | Uniform scale | Derived placed BBox dimensions |
+|---|---|---|---|---|---|
+| `Back` | `(0.160401, 2.740063, 1.785852)` | `(0.094985, 1.904671, 1.402627)` | Y / bottom | 1.438602 | `(0.136645, 2.740063, 2.017822)` |
+| `Front` | `(0.160401, 2.740063, 0.692866)` | `(0.065383, 1.902697, 0.546418)` | Y / bottom | 1.440094 | `(0.094158, 2.740063, 0.786893)` |
+| `Master_Leg` | `(0.259671, 0.246630, 0.692866)` | `(0.743703, 0.815371, 1.903599)` | Z / top | 0.363977 | `(0.270691, 0.296776, 0.692866)` |
+| `Mattress` | `(4.627548, 2.740063, 0.692866)` | `(1.901792, 1.325195, 0.334153)` | X / bottom | 2.433257 | `(4.627548, 3.224540, 0.813081)` |
+
+For each unit, `scale = guide_extent[reference_axis] / generated_extent[reference_axis]`; translation then aligns the selected top/bottom BBox-face centres. The proxy applies no axis stretching or clipping. In particular, the leg output's Z extent is reduced from about `1.903599` to `0.692866` with scale `0.363977` and the same mesh is linked into four leg slots. This can place a semantically wrong furniture-like form at the correct reference height. Its other dimensions are not independently fitted. For the mattress, X length is the matching reference; correct X extent does not establish a padded slab, correct thickness or valid connections. Four distinct T01 OBJ hashes were rechecked, so the recurring desk-like appearance is not literal reuse of one identical OBJ across these four roles.
+
 ## Evidence boundaries and review status
 
 The local controlled baseline contains two styles × four units × five seeds = **40 evaluation outputs**, plus two excluded reproducibility controls. That execution pool is not the scope of the artist's single displayed-assembly observation.
 
-Before this documentation update, the verified local audit recorded:
+At the original assembly audit, the verified local record was:
 
 | Check | Recorded result | What it establishes |
 |---|---|---|
@@ -100,10 +130,11 @@ The orange headboard's reported exception is not converted into a universal head
 **Assembly correction has not resolved part-semantic generation.** Further progress should be measured against whether a generator produces the requested isolated role and required structure.
 
 1. Complete role-specific human review using the existing outputs and original individual review scenes.
-2. Record wrong-part/whole-object content and missing required features separately from placement, scale, file coverage, and intentional guide protrusion.
-3. Compare a predeclared, limited semantic-control candidate only after identifying failing roles and checking its supported role vocabulary and sampling compatibility.
-4. Preserve the same requests, bbox conditions, paired seeds, and review criteria when comparing a model variant. A prompt change is a separate experimental factor.
-5. Revisit functional anchors and artist-facing assembly after semantically suitable parts are available. Do not count a resized wrong part as a semantic fix.
+2. Record wrong-part/whole-object content and missing required features separately from placement, scale, file coverage, and intentional guide protrusion. Keep upholstered mattress results separate from carved-leg/board results.
+3. Before attributing failures to the model, predeclare prompt-only contrasts at fixed checkpoint, BBox, paired seeds and sampling settings: parent phrase `for a bed` present/absent crossed with `carved` present/absent, with `rococo` held fixed. This separates the parent-context and carving factors, including their interaction. These are proposed checks, not completed experiments.
+4. With parent/carving settings fixed, separately compare role prompts with/without `rococo`, then explicit isolation wording; evaluate mattress material/slab cues separately from ornamental wood-part cues. Record style-routing failure and persistent whole-object content under neutral isolated-part prompts as different findings. A material-specific rewrite that changes several cues is a bundled remedy, not a single-factor causal test.
+5. Compare a predeclared, limited model variant only after those prompt checks and supported-conditioning checks. Preserve exact prompt, BBox, paired seeds and review criteria for that model comparison; document prompt changes as separate factors.
+6. Revisit functional anchors and artist-facing assembly after semantically suitable parts are available. Do not count a resized wrong part as a semantic fix.
 
 No production code, source assets, semantic-role research, model/runtime configuration, or generation outputs were changed for this GitHub update. No additional inference or training was run.
 
@@ -113,5 +144,6 @@ No production code, source assets, semantic-role research, model/runtime configu
 - Cached assembly experiment: `GCR_CACHED_ASSEMBLY_20261015_01`, completed local execution directory `execution_20261015_02`.
 - Displayed scene identified from the supplied Outliner: `ROCOCO_T01_BBOX_PROXY`.
 - Source roles retain the approved experiment-only `Back=headboard`, `Front=footboard` overrides.
-- Original source assets, meshes, and private/full experiment logs remain outside the public repository. This public report contains the qualitative observation and supplied screenshots.
+- Public disclosure for this revision is limited to the exact four T01 prompts/role terms, BBox conditions, common sampling settings and summarized placement measurements above, together with the previously published qualitative observation and supplied screenshots. Original source assets, generated mesh files, credentials, local filesystem paths and full/private experiment logs remain outside this public report.
 
+Documentation revision, 2026-10-15: actual conditioning and placement evidence added after review feedback. The retrieved public Markdown contained no U+200B; the revised text was checked for zero-width formatting characters. This revision ran no new generation and made no new human semantic-review decisions.
