@@ -4,7 +4,7 @@
 
 A real-source Bed cached assembly is now available for qualitative inspection. The artist reports correct placement and overall scale in the shown rococo Trial 01 assembly, but all non-headboard outputs still read as scaled/deformed rococo desk or furniture shapes rather than the requested isolated parts. The green Mattress-request output does not supply the intended mattress; grey blocks visible with guides enabled are source references.
 
-See the [artist review](reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md). The headboard is the stated exception, without an automatically inferred ACCEPTED label. This is one assembly observation, not a final acceptance-rate result for the 40-sample baseline. Production code and formal per-sample review events were not changed by this documentation update.
+See the [artist review and three supplied screenshots](reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md). The headboard is the stated exception, without an automatically inferred ACCEPTED label. This is one assembly observation, not a final acceptance-rate result for the 40-sample baseline. Production code and formal per-sample review events were not changed by this documentation update.
 
 The earlier sections below retain the public-baseline context and historical deterministic/fixture finding. Subsequent local real-Bed work validated stochastic diversity and built raw/proxy assembly comparisons; those technical passes do not resolve the semantic failure described above.
 

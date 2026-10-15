@@ -8,7 +8,7 @@ Human-guided structural control for generative 3D asset workflows.
 
 ## Research reports
 
-- **[2026-10-15 Artist Assembly Review](docs/reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md)** — correct placement/scale still leaves wrong part semantics in the shown rococo Bed assembly; qualitative artist observation
+- **[2026-10-15 Artist Assembly Review](docs/reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md)** — correct placement/scale still leaves wrong part semantics in the shown rococo Bed assembly; includes artist-supplied screenshots
 - **[Korean Research Report (국문)](docs/RESEARCH_PAPER_KO.md)** — design, experiments, limitations, and future work
 - **[English Research Report](docs/RESEARCH_PAPER_EN.md)** — English translation of the preliminary technical report
 

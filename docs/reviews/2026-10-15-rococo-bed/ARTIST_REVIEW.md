@@ -33,13 +33,27 @@ The green geometry is the **actual cached Mattress-request output**, even where 
 
 When guides are visible, the grey slab and other grey blocks are the **original source guides**. The grey slab must not be counted as a successfully generated mattress.
 
-## Evidence supplied by the artist
+## Screenshot evidence
 
-The artist supplied three Blender screenshots: generated-only assembly, source/generated Outliner, and assembly with original grey guides overlaid. The images are retained locally and are not included in this public update pending explicit authorization for public image disclosure.
+### 1. Generated outputs without source guides
 
-The supplied Outliner identifies `ROCOCO_T01_BBOX_PROXY` and all seven generated placements corresponding to the source guides. In the guide-overlay view, the grey mattress slab and other grey blocks remain original reference geometry.
+![Artist screenshot of the assembled generated outputs, with orange headboard, purple footboard, blue repeated leg outputs, and green Mattress-request output](images/assembly-generated-only.png)
 
-The structured observation and its scope are recorded in [artist_observation.json](artist_observation.json).
+All requested units can be seen together. Their presence and placement are separate from whether they fulfil their requested roles.
+
+### 2. Source hierarchy and generated display objects
+
+![Artist screenshot of the real Bed source collection and ROCOCO_T01_BBOX_PROXY_Display collection](images/source-and-output-outliner.png)
+
+The source contains `Mattress`, `Back`, `Front`, and four `Leg` objects, plus a non-mesh Light. The display collection contains the corresponding seven generated placements. There are **no authored side-frame guides** in this source contract.
+
+### 3. Original source guides overlaid
+
+![Artist screenshot showing the original grey guide blocks overlaid with the coloured generated outputs](images/assembly-with-source-guides.png)
+
+This view distinguishes generated geometry from the original grey mattress/leg/board guides. It does not supply the missing semantic content of a generated part.
+
+The PNGs are the artist's supplied images, copied without editing. Their hashes and the observation scope are recorded in [artist_observation.json](artist_observation.json).
 
 ## Missing parts: semantic absence versus missing files
 
@@ -99,5 +113,5 @@ No production code, source assets, semantic-role research, model/runtime configu
 - Cached assembly experiment: `GCR_CACHED_ASSEMBLY_20261015_01`, completed local execution directory `execution_20261015_02`.
 - Displayed scene identified from the supplied Outliner: `ROCOCO_T01_BBOX_PROXY`.
 - Source roles retain the approved experiment-only `Back=headboard`, `Front=footboard` overrides.
-- Original source assets, meshes, and private/full experiment logs remain outside the public repository. This public report contains the qualitative observation; the supplied screenshots remain unpublished.
+- Original source assets, meshes, and private/full experiment logs remain outside the public repository. This public report contains the qualitative observation and supplied screenshots.
 

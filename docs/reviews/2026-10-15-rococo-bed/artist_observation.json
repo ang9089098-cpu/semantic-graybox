@@ -58,9 +58,39 @@
   },
   "interpretation": "assembly_coverage_and_placement_do_not_resolve_part_semantic_failure",
   "statistical_scope": "single_displayed_rococo_trial; no_final_40_sample_acceptance_rate; no_generalization_to_modern_or_other_seeds",
-  "supporting_evidence": {
-    "kind": "artist_supplied_Blender_screenshots",
-    "count": 3,
-    "publication_status": "not_published_pending_explicit_public_image_authorization"
-  }
+  "evidence": [
+    {
+      "path": "images/assembly-generated-only.png",
+      "sha256": "6c08aeba62b41bd88141a867424029a176a222385e20dc9ed9e7733b4538aa1b",
+      "bytes": 256356,
+      "dimensions": [
+        826,
+        644
+      ],
+      "origin": "artist_supplied_screenshot",
+      "edited": false
+    },
+    {
+      "path": "images/source-and-output-outliner.png",
+      "sha256": "918b73863af82d5b0edc5e9136fe1dcf2a2e073549893d443364fb3251cafa2d",
+      "bytes": 40055,
+      "dimensions": [
+        380,
+        367
+      ],
+      "origin": "artist_supplied_screenshot",
+      "edited": false
+    },
+    {
+      "path": "images/assembly-with-source-guides.png",
+      "sha256": "a265f9b249f9d8e47d556fe763b5708b44bb13283e1c31458f64f2a7b0d217a2",
+      "bytes": 146097,
+      "dimensions": [
+        720,
+        533
+      ],
+      "origin": "artist_supplied_screenshot",
+      "edited": false
+    }
+  ]
 }
