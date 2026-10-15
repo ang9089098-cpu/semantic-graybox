@@ -8,6 +8,7 @@ Human-guided structural control for generative 3D asset workflows.
 
 ## Research reports
 
+- **[2026-10-15 Artist Assembly Review](docs/reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md)** — correct placement/scale still leaves wrong part semantics in the shown rococo Bed assembly; qualitative artist observation
 - **[Korean Research Report (국문)](docs/RESEARCH_PAPER_KO.md)** — design, experiments, limitations, and future work
 - **[English Research Report](docs/RESEARCH_PAPER_EN.md)** — English translation of the preliminary technical report
 
@@ -58,3 +59,4 @@ This is not production-ready.
 ## License
 
 Original Semantic Graybox source code in this repository is licensed under the MIT License. Third-party software, models, runtimes, and dependencies remain subject to their own licenses.
+

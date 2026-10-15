@@ -1,0 +1,66 @@
+{
+  "record_type": "qualitative_artist_observation",
+  "is_production_semantic_review_event": false,
+  "recorded_date": "2026-10-15",
+  "timezone": "Asia/Seoul",
+  "language": "en",
+  "scope": {
+    "source": "real Bed.blend",
+    "style": "rococo",
+    "trial_index": 1,
+    "seed": 20261001,
+    "scene": "ROCOCO_T01_BBOX_PROXY",
+    "baseline_batch_id": "fe600f84f10e428c925f3f1cd9743415"
+  },
+  "artist_report": {
+    "placement_and_overall_scale": "reported_correct_in_shown_assembly",
+    "non_headboard_outputs": "reported_as_scaled_or_deformed_rococo_desk_or_furniture_shapes_instead_of_requested_isolated_parts",
+    "headboard": "reported_exception; no_formal_acceptance_inferred",
+    "formal_per_sample_decisions_added": 0
+  },
+  "requested_units": [
+    {
+      "unit_id": "Back",
+      "role": "HEADBOARD",
+      "display": "orange",
+      "qualitative_observation": "exception_named_by_artist"
+    },
+    {
+      "unit_id": "Front",
+      "role": "FOOTBOARD",
+      "display": "purple",
+      "qualitative_observation": "included_in_reported_non_headboard_semantic_failure"
+    },
+    {
+      "unit_id": "Master_Leg",
+      "role": "LEG",
+      "display": "blue",
+      "placements": 4,
+      "qualitative_observation": "included_in_reported_non_headboard_semantic_failure"
+    },
+    {
+      "unit_id": "Mattress",
+      "role": "MATTRESS",
+      "display": "green",
+      "qualitative_observation": "included_in_reported_non_headboard_semantic_failure; intended_mattress_content_not_supplied"
+    }
+  ],
+  "source_guide_overlay": {
+    "grey_geometry": "original_source_guides; not_generated_outputs",
+    "side_frames": "not_declared_in_real_source_or_requests"
+  },
+  "assembly_implementation": {
+    "transform": "uniform_scale_plus_translation_using_declared_bbox_proxy",
+    "mesh_vertex_edits": false,
+    "new_modelling": false,
+    "new_inference": false,
+    "functional_attachment": "not_certified"
+  },
+  "interpretation": "assembly_coverage_and_placement_do_not_resolve_part_semantic_failure",
+  "statistical_scope": "single_displayed_rococo_trial; no_final_40_sample_acceptance_rate; no_generalization_to_modern_or_other_seeds",
+  "supporting_evidence": {
+    "kind": "artist_supplied_Blender_screenshots",
+    "count": 3,
+    "publication_status": "not_published_pending_explicit_public_image_authorization"
+  }
+}
