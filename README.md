@@ -6,6 +6,26 @@ Human-guided structural control for generative 3D asset workflows.
 
 **Status:** research prototype, v0.3.1 baseline.
 
+## Research milestone — individual parts assembled in Blender
+
+**Four generated part roles. Seven source-guided placements. One shared Leg mesh.**  
+A staged workflow using the artist's real `Bed.blend` guides produced a Headboard, Footboard, Mattress and Leg master, then assembled them in Blender.
+
+[![Blender viewport of the generated Bed assembly: Headboard, Mattress, open-centre Footboard and linked Legs](docs/reviews/2026-10-16-imagegen-triposg-workflow/images/artist-viewport-assembly.png)](docs/reviews/2026-10-16-imagegen-triposg-workflow/README.md)
+
+**Workflow:** real graybox guides → built-in ImageGen references → artist image approval → local TripoSG → raw-part inspection → uniform fitting and linked placement.
+
+| Milestone | Recorded result |
+|---|---|
+| Individually generated roles | **4 / 4** |
+| Generated placements in the original layout | **7 / 7**, including four linked Legs |
+| Artist-approved raw shapes | **2 / 4** — Leg and Mattress |
+| Program integration checks | **101 unit tests passed**; Blender 5.2.2 background smoke passed |
+
+**Quality review remains open.** The Footboard lacks its solid centre, the Headboard retains detached ornament, and Mattress/Leg support contact is unresolved. Seven populated slots do not establish a finished, artist-approved bed. These are prototype results; the new integrated panel's manual check and live GPT Image API validation remain pending.
+
+**[View the workflow, 14 evidence images and measured results →](docs/reviews/2026-10-16-imagegen-triposg-workflow/README.md)**
+
 ## Research reports
 
 - **[2026-10-16 ImageGen + Local TripoSG Workflow and Bed Results](docs/reviews/2026-10-16-imagegen-triposg-workflow/README.md)** — executed workflow, exact conditioning, fourteen evidence figures, including four artist-supplied Blender screenshots, seven placements, remaining shape/contact failures, program-integration checks and the GPT Image API direction
