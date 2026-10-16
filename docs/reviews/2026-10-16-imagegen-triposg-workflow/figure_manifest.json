@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "visual_edits": false,
+  "metadata_policy": "Remove PNG tEXt/iTXt/zTXt publication metadata only; all non-text chunks identical.",
+  "figures": [
+    {
+      "path": "images/leg-reference.png",
+      "source_record": "builtin_leg_01/candidate.png",
+      "original_sha256": "b3824e56eb5f7121f59061f49596033dca4e439529c582b624d60d9406e0b33b",
+      "published_sha256": "b3824e56eb5f7121f59061f49596033dca4e439529c582b624d60d9406e0b33b",
+      "original_bytes": 765592,
+      "published_bytes": 765592,
+      "removed_text_chunk_types": [],
+      "compressed_pixel_data_sha256": "da5fcb9ed5bc036987eb122cf4a1925e907404679063938a025af52c0da35412",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/mattress-reference.png",
+      "source_record": "builtin_mattress_01/candidate.png",
+      "original_sha256": "9c2e727aa39cbe9422105c81e3f6a463fb0066c539ea1b309d68b1ecd1f47e4b",
+      "published_sha256": "9c2e727aa39cbe9422105c81e3f6a463fb0066c539ea1b309d68b1ecd1f47e4b",
+      "original_bytes": 1191058,
+      "published_bytes": 1191058,
+      "removed_text_chunk_types": [],
+      "compressed_pixel_data_sha256": "92ddadac996ba5d49f2a9c795251d2587541b5a0f0721bade135c7ad7c8d354e",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/headboard-reference.png",
+      "source_record": "g4_board_references_01/Back/candidate.png",
+      "original_sha256": "3ecd5344e5b07b5ae9e15f7f3d2b273e30f794476c652e78b8d1718b26b68a31",
+      "published_sha256": "3ecd5344e5b07b5ae9e15f7f3d2b273e30f794476c652e78b8d1718b26b68a31",
+      "original_bytes": 1400804,
+      "published_bytes": 1400804,
+      "removed_text_chunk_types": [],
+      "compressed_pixel_data_sha256": "263244cd3cd8e44cb5f63b58ab592ad8a25ffdf878188dd95faad9597239c295",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/footboard-reference.png",
+      "source_record": "g4_board_references_01/Front/candidate.png",
+      "original_sha256": "86648b24b61c4305f3995513db556e67660c465c2b34b4ae910b0b1d59718e27",
+      "published_sha256": "86648b24b61c4305f3995513db556e67660c465c2b34b4ae910b0b1d59718e27",
+      "original_bytes": 1026103,
+      "published_bytes": 1026103,
+      "removed_text_chunk_types": [],
+      "compressed_pixel_data_sha256": "4ef83f3e850ef158301197367899d29dc52bc04953af14f09dcf03cfe332c998",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/headboard-raw.png",
+      "source_record": "g4_boards_01/Back/iso_negative_x.png",
+      "original_sha256": "521cb136d86626718e812d90ecf992a4df8705b329d6420cfe940c41449d0d9a",
+      "published_sha256": "1a66127f861f375f68a2355353849adfa32f3420fedcfbff56ebf37ad18cf70b",
+      "original_bytes": 870717,
+      "published_bytes": 870284,
+      "removed_text_chunk_types": [
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "compressed_pixel_data_sha256": "e8ac21df70bc2844362f3eb3b087f69f3c2ae2b30aa774be4c69f77c2cb16307",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/footboard-raw.png",
+      "source_record": "g4_boards_01/Front/iso_positive_x.png",
+      "original_sha256": "3c8c247410b214df0ccfa4b9076a9dbe4e9d10d913db683df5dcc8566defdb94",
+      "published_sha256": "cb5fbee45186cfcf9a3d4de62facafb10857774ce483eb27135879955c7b5f60",
+      "original_bytes": 613988,
+      "published_bytes": 613553,
+      "removed_text_chunk_types": [
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "compressed_pixel_data_sha256": "9f3ececca18269cb048e584610d2028a21fab7de65cebc6323613239276fe772",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/footboard-model-input.png",
+      "source_record": "g4_boards_01/worker/attempts/7d95821acdf4406c83fd6528262e2a87/model_input.png",
+      "original_sha256": "93b847245992f09c3dc8ade9627714ad685208789ed75ac28f0f0f93f4f23c4e",
+      "published_sha256": "93b847245992f09c3dc8ade9627714ad685208789ed75ac28f0f0f93f4f23c4e",
+      "original_bytes": 814389,
+      "published_bytes": 814389,
+      "removed_text_chunk_types": [],
+      "compressed_pixel_data_sha256": "ea39b1de908dffccc153673c75a198a9bc9d8d56f5c4f3f233882bd652feeb42",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/assembled-iso.png",
+      "source_record": "g4_live_assembly_01/assembled_iso.png",
+      "original_sha256": "091411f2bcb1605695ee97f22cf9a9307a8f46dfcfe15014209c00ffe2e6ae17",
+      "published_sha256": "b4bc89c2cd19ee3c0765724d9906c4a9f1020a5bf271820d471c13b2c771fc91",
+      "original_bytes": 1395788,
+      "published_bytes": 1395367,
+      "removed_text_chunk_types": [
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "compressed_pixel_data_sha256": "14cad0c47daeb73752611dafe2c07c8ce3f5007c0f662e28a8bb51b174aafd25",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/assembled-reverse.png",
+      "source_record": "g4_live_assembly_01/assembled_reverse.png",
+      "original_sha256": "988253d77aa2d1715c92a52cefb1b3c012b59e0d187b078bef1878190dba6c45",
+      "published_sha256": "19d555b5ca67d06a2a5b6bc4fc36b997fa375f7c9bb16530232fb1ed33415307",
+      "original_bytes": 1195659,
+      "published_bytes": 1195238,
+      "removed_text_chunk_types": [
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "compressed_pixel_data_sha256": "a0e89c2ddc1718242ac2f58b4ad4c0d653f6474700cf452a71bc088ee5e0964f",
+      "all_non_text_chunks_byte_identical": true
+    },
+    {
+      "path": "images/leg-mattress-contact.png",
+      "source_record": "g3_mattress_placement_01/generated_leg_and_mattress_only.png",
+      "original_sha256": "b215856dc38bbdf00741078e27729a68138cd5870f855f2781fe1be3ca358a96",
+      "published_sha256": "73fdba1ad649129e0d572fd4e71ab9a5a11344308b2761c27b633d857e96b756",
+      "original_bytes": 718218,
+      "published_bytes": 717824,
+      "removed_text_chunk_types": [
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "compressed_pixel_data_sha256": "9c9bc98fad33df43b35d29fbd6104b531e69e0938022a639cf81678c956a9253",
+      "all_non_text_chunks_byte_identical": true
+    }
+  ]
+}

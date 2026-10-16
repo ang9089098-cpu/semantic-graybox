@@ -147,3 +147,8 @@ No production code, source assets, semantic-role research, model/runtime configu
 - Public disclosure for this revision is limited to the exact four T01 prompts/role terms, BBox conditions, common sampling settings and summarized placement measurements above, together with the previously published qualitative observation and supplied screenshots. Original source assets, generated mesh files, credentials, local filesystem paths and full/private experiment logs remain outside this public report.
 
 Documentation revision, 2026-10-15: actual conditioning and placement evidence added after review feedback. The retrieved public Markdown contained no U+200B; the revised text was checked for zero-width formatting characters. This revision ran no new generation and made no new human semantic-review decisions.
+
+## Follow-up: image-conditioned workflow and assembly
+
+The [2026-10-16 workflow and results report](../2026-10-16-imagegen-triposg-workflow/README.md) documents the later built-in ImageGen + local TripoSG experiment, exact reference prompts, actual mesh renders, seven-slot trial assembly, remaining geometry/contact defects and local program-integration checks. It also records the latest decision to defer local image models and use GPT Image API for the future image stage; live API validation remains pending. This follow-up does not change the stock Cube3D observation or its formal review scope above.
+

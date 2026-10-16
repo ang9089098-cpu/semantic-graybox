@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "timezone": "Asia/Seoul",
+  "scope": "Documentation snapshot of staged execution_01 plus later cached program integration tests",
+  "current_decision": {
+    "image_provider_direction": "OpenAI GPT Image API",
+    "local_image_model_adoption": "DEFERRED",
+    "local_3d_worker": "TripoSG",
+    "live_image_api_validation": "NOT_PERFORMED",
+    "implementation_work": "PAUSED_FOR_DOCUMENTATION"
+  },
+  "current_staged_call_ledger": {
+    "builtin_image_calls": 4,
+    "local_mesh_jobs": 4,
+    "image_api_calls": 0,
+    "automatic_retries": 0,
+    "excludes_earlier_feasibility_and_commercial_and_stock_trials": true
+  },
+  "coverage": {
+    "generated_roles": 4,
+    "declared_roles": 4,
+    "human_accepted_raw_roles": 2,
+    "generated_placements": 7,
+    "declared_slots": 7,
+    "assembly_review": "UNREVIEWED",
+    "complete_bed_quality_gate_passed": false
+  },
+  "units": {
+    "Master_Leg": {
+      "raw_obj_sha256": "4477a0653cc6ed642c9e0fa851944c0e047adbd8d31579afcb599145156c701e",
+      "vertices": 84737,
+      "faces": 169486,
+      "connected_components": 2,
+      "reference_approved_by_artist": true,
+      "raw_review": "ACCEPTED_FOR_PLACEMENT_TEST",
+      "placed_objects": 4,
+      "functional_interface_approved": false
+    },
+    "Mattress": {
+      "raw_obj_sha256": "37fe98e4400015c31941dbfaa8cd3ca7986850c6b52868e65977a6b77dd7689d",
+      "vertices": 100090,
+      "faces": 200176,
+      "connected_components": 1,
+      "reference_approved_by_artist": true,
+      "raw_review": "ACCEPTED_FOR_PLACEMENT_TEST",
+      "placed_objects": 1,
+      "functional_interface_approved": false
+    },
+    "Back": {
+      "raw_obj_sha256": "5659954c4c836af747a8079ad6e84d46a799d8d5b70e5a23a73351c1f80c8ce7",
+      "vertices": 85377,
+      "faces": 170742,
+      "connected_components": 3,
+      "reference_approved_by_artist": true,
+      "raw_review": "UNREVIEWED",
+      "placed_objects": 1,
+      "functional_interface_approved": false
+    },
+    "Front": {
+      "raw_obj_sha256": "78de8c31bc32013cce3b2b31485bddc8e9b6353298f3c99d30990ff572c1982e",
+      "vertices": 40617,
+      "faces": 81522,
+      "connected_components": 6,
+      "reference_approved_by_artist": true,
+      "raw_review": "UNREVIEWED",
+      "placed_objects": 1,
+      "functional_interface_approved": false
+    }
+  },
+  "runtime": {
+    "blender_version": "5.2.2 LTS",
+    "blender_build": "d13f752e3b9c",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "reported_gpu_memory_mib": 16303,
+    "triposg_code_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+    "triposg_model_revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "verified_model_files": 10,
+    "lazy_diso_patch_sha256": "28429a175131c3a4f19e36f2270488f97229b0f861e4db194b1a61f1d5f9e089",
+    "seed": 20261015,
+    "dtype": "float16",
+    "steps": 50,
+    "guidance_scale": 7.0,
+    "tokens": 2048,
+    "flash_decoder": false,
+    "dense_octree_depth": 7,
+    "hierarchical_octree_depth": 8
+  },
+  "contact_diagnostic": {
+    "status": "FAIL_UNDER_PROPOSED_SAMPLED_CRITERIA",
+    "artist_contact_review": "UNREVIEWED",
+    "automatic_candidate_patches": true,
+    "samples_per_slot": 625,
+    "reference_length": 0.24663,
+    "gap_band": 0.0049326,
+    "sampled_vertical_hits": [
+      1,
+      36,
+      24,
+      65
+    ],
+    "sampled_vertical_coverage_percent": [
+      0.16,
+      5.76,
+      3.84,
+      10.4
+    ],
+    "near_contact_samples": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "coverage_is_contact_area": false
+  },
+  "board_central_occupancy_heuristic": {
+    "rays": 1271,
+    "headboard_hits": 1271,
+    "footboard_hits": 171,
+    "footboard_hit_percent": 13.45,
+    "footboard_no_hit_percent": 86.55,
+    "human_defined_panel_mask": false
+  },
+  "board_job_wall_seconds_after_model_loading": {
+    "Back": 31.395,
+    "Front": 15.019,
+    "scope": "preprocessing + inference + extraction + export + statistics; excludes model load and artist latency"
+  },
+  "source_assets": {
+    "Bed.blend": {
+      "sha256": "9b6e4d79a9f88b46413dc1cb05b1d45483dcc7090c3e6a45a07fd55d2874947c",
+      "matches_frozen_value": true
+    },
+    "desk.blend": {
+      "sha256": "d839f01fe31e1d7c24a54cf540bb2104640cd6a5649cdfd5085a6a6675681392",
+      "matches_frozen_value": true
+    }
+  },
+  "assembly_artifact": {
+    "source_record": "g4_live_assembly_01/SG_G4_Seven_Part_Assembly_Review.blend",
+    "sha256": "f6b8748b2be5e0c56eba46384017db876232b148f179fc68926c0a0958f2e33d",
+    "publicly_distributed": false
+  },
+  "regression_tests": {
+    "baseline_tests.log": {
+      "tests": 79,
+      "seconds": 0.112,
+      "status": "PASS",
+      "source_sha256": "f7314751ce3b1d11085d45d86e5558143c6331adaef96f8b69829cf469a9077d"
+    },
+    "unit_tests.log": {
+      "tests": 101,
+      "seconds": 1.336,
+      "status": "PASS",
+      "source_sha256": "d67a87a861915c6dd742faf6239ba6d94b7518bbbef9426bb0889a8b7366f8a2"
+    },
+    "legacy_ui_smoke.log": {
+      "status": "PASS",
+      "source_sha256": "dd97bfd8d43acd761d69fc208c82ea292c754bef9011f9e2f0e0a8b8f94f1373"
+    },
+    "legacy_batch_smoke.log": {
+      "status": "PASS",
+      "source_sha256": "bf366ce1efff42b865b15b6ad4f36a8b8f27e498f25bad56e7456af044ceca68"
+    }
+  },
+  "blender_cached_integration_smoke": {
+    "status": "PASS",
+    "blender_version": [
+      5,
+      2,
+      2
+    ],
+    "register_unregister_cycles": 3,
+    "adopted_roles": 4,
+    "preserved_human_accepted_roles": 2,
+    "visible_placements": 7,
+    "original_board_review_unreviewed": true,
+    "target_only_mattress_replacement": true,
+    "replacement_world_vertex_max_error": 8.534086384341927e-07,
+    "kept_output_protected": true,
+    "six_siblings_and_source_guides_preserved": true,
+    "four_legs_shared_one_mesh": true,
+    "unapproved_board_placement_blocked": true,
+    "imagegen_handoff_exported_without_dispatch": true,
+    "save_reload_restores_workflow": true,
+    "source_hashes_unchanged": true,
+    "previous_live_assembly_unchanged": true,
+    "fresh_real_bed_analysis_four_roles_seven_slots": true,
+    "four_actual_guide_renders": true,
+    "cached_imagegen_return_autoload": true,
+    "scene_switch_keeps_result_with_origin_session": true,
+    "image_return_does_not_autoapprove_or_start_3D": true,
+    "new_image_calls": 0,
+    "new_mesh_calls": 0,
+    "assembly_acceptance_inferred": false
+  },
+  "new_integrated_panel_live_manual_check": "PENDING",
+  "new_integrated_gpu_generation_validation": "NOT_PERFORMED",
+  "semantic_review_log_entries_created_by_publication": 0,
+  "local_record_roots": [
+    "g3_leg_placement_01",
+    "g3_mattress_placement_01",
+    "g4_boards_01",
+    "g4_live_assembly_01",
+    "Generated/artist_workflow_integration_20261016"
+  ]
+}

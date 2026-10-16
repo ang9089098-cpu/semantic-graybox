@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "scope": "Four references in staged execution_01; not the earlier separate feasibility pilot",
+  "image_api_live_calls_in_this_stage": 0,
+  "builtin_imagegen_model_version_exposed": false,
+  "camera_projection_match_verified": false,
+  "units": [
+    {
+      "unit_id": "Master_Leg",
+      "effective_role": "furniture leg",
+      "source_record": "builtin_leg_01/request.json",
+      "image_provider": "image_gen built-in",
+      "image_model_id": null,
+      "image_seed": null,
+      "transparent_background_requested": true,
+      "exact_image_prompt": "Use case: sketch-to-render.\nAsset type: a single isolated part reference for local TripoSG reconstruction, not a finished furniture scene.\nInput image 1: the exact supplied Bed.blend Master_Leg graybox, used ONLY as structural proportions, orientation and mounting intent.\nPrimary request: Create ONE rococo walnut bed support leg. Preserve the reference's substantial roughly square cross-section and approximately 2.7–2.8-to-1 height-to-width/depth relationship; do not make a thin spindle. Develop a coherent cabriole form with a broad square upper mounting block, a substantial softly curved and tapering shaft, and ONE grounded carved foot. Prefer bilateral symmetry about the vertical plane through the outward 45-degree corner bisector so the same master can later be rotated into four corners. This is a soft design cue; show a single leg, never four views or four legs.\nMaterials/design: warm walnut, restrained rococo scroll carving and flowing acanthus motifs; readable main structural body with modest ornament. Do not let carving replace the structural volume.\nGuide dimensions X/Y/Z: 0.259671 / 0.246630 / 0.692866. The graybox is a proportion and anchor reference, NOT a cage: ornament and curved silhouette may extend beyond it. Retain the support height, a clearly flat upper attachment area, and a usable foot contact region. Do not simply texture a cuboid.\nComposition: one complete upright leg, same three-quarter orthographic view, camera roll and broad orientation as the guide. Whole object centered with generous transparent margin, upper surface and foot fully visible. Neutral product visualization, even soft studio light, no cast ground shadow or ground plane. Actual transparent alpha background.\nConstraints: exactly ONE support leg. NO tabletop, seat, horizontal rail, bed frame, headboard, footboard, mattress, additional legs, whole bed, whole desk, room, base plinth, text, watermark, or multi-view collage. This is an UNREVIEWED reference candidate; do not add labels to the image.",
+      "guide_sha256": "57ab5f26b3818a8da71b42a9ab4ae7a74f2d8895674d531c50e461b33f9d5b75",
+      "guide_dimensions_xyz": [
+        0.259671,
+        0.24663,
+        0.692866
+      ],
+      "reference": "images/leg-reference.png",
+      "reference_sha256": "b3824e56eb5f7121f59061f49596033dca4e439529c582b624d60d9406e0b33b",
+      "input_roles": [
+        "Actual source guide: geometry/proportion/pose/camera intent"
+      ],
+      "raw_request_semantic_type": "furniture leg",
+      "three_d_model_conditioning": "preprocessed image only; no text, role, guide bbox, mesh or full assembly layout"
+    },
+    {
+      "unit_id": "Mattress",
+      "effective_role": "mattress",
+      "source_record": "builtin_mattress_01/request.json",
+      "image_provider": "image_gen built-in",
+      "image_model_id": null,
+      "image_seed": null,
+      "transparent_background_requested": true,
+      "exact_image_prompt": "Use case: sketch-to-render. Asset type: a single isolated mattress reference for local image-to-3D reconstruction. Input image 1 is the actual supplied Bed.blend Mattress greybox guide, used as the geometry, silhouette, camera and proportion reference. Replace only this one grey slab with ONE upholstered mattress. Preserve its broad, long rectangular form and substantial thickness: intended local X/Y/Z dimensions 4.627548 / 2.740063 / 0.692866, equivalent proportions approximately 6.679 : 3.955 : 1. Use the SAME three-quarter camera, projection and roll as the guide; show the entire single mattress from above with both thickness and top surface readable, centered with clear margin. It belongs to a rococo design assembly, but this role is soft ivory woven textile with subtle shallow quilting, softly rounded corners, restrained piped seams, a continuous padded slab body, and a broad nearly flat underside mounting/support surface. Do not add rococo wood carving to the mattress. Soft neutral studio lighting, no floor or ground shadow, genuinely transparent background, no text or watermark. Do not show wood, carved frames, headboards, footboards, side rails, posts, legs, pillows, sheets, bedding or any complete bed, desk or furniture assembly. Do not turn it into a thin topper, a block of carved wood, a multi-view collage, or a stack of separate cushions. Preserve the guide's approximate relative length, width and thickness; the guide expresses design intent rather than a clipping cage. Output one coherent reference of only this mattress, with actual alpha transparency.",
+      "guide_sha256": "5afe847484374353acd3e6da880cc6188094ca62729ccde5956b34ef6ce35a82",
+      "guide_dimensions_xyz": [
+        4.627548,
+        2.740063,
+        0.692866
+      ],
+      "reference": "images/mattress-reference.png",
+      "reference_sha256": "9c2e727aa39cbe9422105c81e3f6a463fb0066c539ea1b309d68b1ecd1f47e4b",
+      "input_roles": [
+        "Actual source guide: geometry/proportion/pose/camera intent"
+      ],
+      "raw_request_semantic_type": "mattress",
+      "three_d_model_conditioning": "preprocessed image only; no text, role, guide bbox, mesh or full assembly layout"
+    },
+    {
+      "unit_id": "Back",
+      "effective_role": "headboard",
+      "source_record": "g4_board_references_01/Back/request.json",
+      "image_provider": "image_gen built-in",
+      "image_model_id": null,
+      "image_seed": null,
+      "transparent_background_requested": true,
+      "exact_image_prompt": "Use case: sketch-to-render. Asset type: isolated single-part reference for image-to-3D. Image 1 is the ACTUAL supplied Bed.blend Back greybox guide: use it as the shape/proportion, upright pose, camera, roll and projection reference. Image 2 is an APPROVED walnut leg: STYLE AND MATERIAL REFERENCE ONLY, do not copy its leg shape or add legs to this output. ONE upright solid headboard panel, with intended width:height:thickness 2.740063:1.785852:0.160401. Keep the solid centre panel and its rectangular structural body readable; a gently curved crest and shallow carved border may extend slightly beyond the guide. The guide is a thin upright board whose local X is thickness, Y is broad width, Z is height. Create only this headboard panel with warm walnut, the same medium brown polished finish as image 2, restrained rococo leaf-scroll relief and a small integrated central cartouche. Keep carving modest and connected to the panel rather than freestanding ornamental clutter. Preserve a broad flat rear mounting surface and readable solid lower attachment areas. No extra floor-reaching posts, feet or support legs: those are separate generated units already. Use the SAME three-quarter camera and apparent upright board direction as image 1; keep the entire single part visible with clear margin. The guide sets ratios and functional anchors; ornament may project beyond it, it is not a clipping cage. Soft even neutral lighting, truly transparent background with actual alpha, no floor or cast ground shadow, no text or watermark. Do not produce a complete bed, desk, chair, tabletop, mattress, side rails, second board, extra legs, room scene, assembly, contact sheet or multiple views. Output exactly ONE isolated coherent headboard board, no other objects.",
+      "guide_sha256": "facecbe28013b847bc8a7bc3cc05b39ce06783e57a5829267e23fbb22480468f",
+      "guide_dimensions_xyz": [
+        0.160401,
+        2.740063,
+        1.785852
+      ],
+      "reference": "images/headboard-reference.png",
+      "reference_sha256": "3ecd5344e5b07b5ae9e15f7f3d2b273e30f794476c652e78b8d1718b26b68a31",
+      "input_roles": [
+        "Actual source guide: geometry/pose/camera",
+        "Approved leg: walnut rococo style only"
+      ],
+      "raw_request_semantic_type": "chair backrest",
+      "three_d_model_conditioning": "preprocessed image only; no text, role, guide bbox, mesh or full assembly layout",
+      "style_reference_sha256": "b3824e56eb5f7121f59061f49596033dca4e439529c582b624d60d9406e0b33b",
+      "style_reference": "images/leg-reference.png"
+    },
+    {
+      "unit_id": "Front",
+      "effective_role": "footboard",
+      "source_record": "g4_board_references_01/Front/request.json",
+      "image_provider": "image_gen built-in",
+      "image_model_id": null,
+      "image_seed": null,
+      "transparent_background_requested": true,
+      "exact_image_prompt": "Use case: sketch-to-render. Asset type: isolated single-part reference for image-to-3D. Image 1 is the ACTUAL supplied Bed.blend Front greybox guide: use it as the shape/proportion, upright pose, camera, roll and projection reference. Image 2 is an APPROVED walnut leg: STYLE AND MATERIAL REFERENCE ONLY, do not copy its leg shape or add legs to this output. ONE low wide solid footboard panel, with intended width:height:thickness 2.740063:0.692866:0.160401. Preserve the distinctly low wide body: width is approximately 3.955 times height. Do not turn this into a tall headboard. Use a very gently curved upper edge and shallow decorative border while retaining a substantial connected solid centre. The guide is a thin upright board whose local X is thickness, Y is broad width, Z is height. Create only this footboard panel with warm walnut, the same medium brown polished finish as image 2, restrained rococo leaf-scroll relief and a small integrated central cartouche. Keep carving modest and connected to the panel rather than freestanding ornamental clutter. Preserve a broad flat rear mounting surface and readable solid lower attachment areas. No extra floor-reaching posts, feet or support legs: those are separate generated units already. Use the SAME three-quarter camera and apparent upright board direction as image 1; keep the entire single part visible with clear margin. The guide sets ratios and functional anchors; ornament may project beyond it, it is not a clipping cage. Soft even neutral lighting, truly transparent background with actual alpha, no floor or cast ground shadow, no text or watermark. Do not produce a complete bed, desk, chair, tabletop, mattress, side rails, second board, extra legs, room scene, assembly, contact sheet or multiple views. Output exactly ONE isolated coherent footboard board, no other objects.",
+      "guide_sha256": "c25cef38b92644c145d5f45026c16a4d122739cdf2f72e569d6b0fb34f6b5f5f",
+      "guide_dimensions_xyz": [
+        0.160401,
+        2.740063,
+        0.692866
+      ],
+      "reference": "images/footboard-reference.png",
+      "reference_sha256": "86648b24b61c4305f3995513db556e67660c465c2b34b4ae910b0b1d59718e27",
+      "input_roles": [
+        "Actual source guide: geometry/pose/camera",
+        "Approved leg: walnut rococo style only"
+      ],
+      "raw_request_semantic_type": "front",
+      "three_d_model_conditioning": "preprocessed image only; no text, role, guide bbox, mesh or full assembly layout",
+      "style_reference_sha256": "b3824e56eb5f7121f59061f49596033dca4e439529c582b624d60d9406e0b33b",
+      "style_reference": "images/leg-reference.png"
+    }
+  ]
+}
