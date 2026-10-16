@@ -203,5 +203,48 @@
     "g4_boards_01",
     "g4_live_assembly_01",
     "Generated/artist_workflow_integration_20261016"
-  ]
+  ],
+  "artist_supplied_viewport_evidence": {
+    "received_date": "2026-10-16",
+    "screenshots": [
+      {
+        "path": "images/artist-viewport-leg.png",
+        "subject": "Isolated Leg",
+        "published_sha256": "eeee25b383dfeec43240de6a566399ec067251e51bf8ee18c144a62991e1427f",
+        "width_px": 546,
+        "height_px": 646
+      },
+      {
+        "path": "images/artist-viewport-mattress.png",
+        "subject": "Isolated Mattress",
+        "published_sha256": "fbb2a2ba230bf63129a764224b13eb5e941caa8d97cc7054176fbeef35590bad",
+        "width_px": 773,
+        "height_px": 566
+      },
+      {
+        "path": "images/artist-viewport-footboard.png",
+        "subject": "Footboard central aperture",
+        "published_sha256": "4eac91f05e09fd29d18af9e362d7deb63ffdaaeffc705838f62f22816df56f83",
+        "width_px": 857,
+        "height_px": 564
+      },
+      {
+        "path": "images/artist-viewport-assembly.png",
+        "subject": "Bed assembly trial",
+        "published_sha256": "ffcb66d9464ee3d471199708a649c2e4a4762b79afb8f7f0692690888d0e331a",
+        "width_px": 828,
+        "height_px": 612
+      }
+    ],
+    "public_figure_total": 14,
+    "source_assets_or_mesh_files_embedded": false,
+    "screenshot_capture_timestamps_verified": false,
+    "scope": "Qualitative visible form and assembly evidence; PNG hashes bind screenshot files, not hidden Blender scene geometry.",
+    "new_image_generation_calls": 0,
+    "new_mesh_generation_calls": 0,
+    "new_human_semantic_review_events": 0,
+    "new_measurements_inferred_from_pixels": false,
+    "existing_review_and_contact_status_preserved": true,
+    "documentation_only_revision": true
+  }
 }

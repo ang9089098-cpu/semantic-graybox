@@ -154,6 +154,28 @@ A zero boundary-edge count does not mean a solid panel exists: a closed frame ca
 
 The evidence localizes the missing-panel failure to after the saved image preparation and by raw 3D generation/extraction/export. It does not distinguish learned shape prior from thin-surface representation or extraction resolution. One trial is insufficient to declare a universal TripoSG limitation.
 
+### Artist-supplied Blender viewport evidence — added 2026-10-16
+
+The artist supplied the following four screenshots for publication after the first version of this report. They show isolated parts and the assembled viewport state, complementing the controlled renders above. These are Blender screenshots of geometry, not new ImageGen reference candidates. They are reproduced without visual editing; screenshot hashes and dimensions are recorded in [figure_manifest.json](figure_manifest.json).
+
+**Isolated Leg.** A substantial square upper block, carved curved shaft and one foot are visible, consistent with the intended isolated support-leg role. The orange outline indicates selection in Blender. This view adds evidence of the visible form; it does not measure mounting-plane flatness, exact symmetry, topology or the hidden underside.
+
+![Artist-supplied Blender close-up of the selected isolated carved support Leg](images/artist-viewport-leg.png)
+
+**Isolated Mattress.** The image shows a coherent padded rectangular slab with rounded edges, a quilted upper surface and perimeter seams, rather than a wooden furniture frame. The camera/light outlines are viewport helpers. A recognizable mattress silhouette does not demonstrate that its lower footprint reaches all four supports; the actual-surface contact failure documented above remains unresolved.
+
+![Artist-supplied Blender viewport of the isolated quilted Mattress](images/artist-viewport-mattress.png)
+
+**Footboard defect.** The long ornamental frame and carved relief are visible, but the centre is open. This supports the same missing-solid-panel observation made in the raw mesh diagnostic. Ornament is present while a required structural feature is absent. Surface roughness and the uneven upper edge also remain visible; the screenshot supplies no new numerical roughness measurement or repair result.
+
+![Artist-supplied Blender close-up of the Footboard with an open centre and uneven upper edge](images/artist-viewport-footboard.png)
+
+**Assembled Bed trial.** Headboard, Mattress, Footboard and visible Leg instances are shown together in the source-guided arrangement. The view demonstrates their overall spatial relationship and keeps the Footboard aperture visible. A leg is occluded from this angle: the seven-placement count comes from the saved-scene audit, not an independent count of every object in this screenshot. The headboard's lower fragment may be hidden in this view; its absence from the visible silhouette is not evidence of removal.
+
+![Artist-supplied Blender viewport of the assembled Bed trial with generated parts](images/artist-viewport-assembly.png)
+
+The new screenshots reinforce the distinction between isolated-part recognition, visible assembly and usable geometry. They do not add a new generation trial, prove exact mesh identity from hidden scene data, or constitute an additional Accept/Reject decision. Existing status remains: four generated roles, seven audited placements, two artist-accepted raw roles, unreviewed boards/whole assembly and unresolved support contact. Local image-model adoption remains deferred; the next image-provider direction is GPT Image API, whose live integration validation is still pending.
+
 ## 6. Assembly in the existing artist session
 
 The artist clarified that “continue” meant completing the bed assembly in the already-open Blender, rather than starting another revision. The existing five placements were preserved exactly. The live unsaved state was first snapshotted, then the two existing raw board meshes were added and a new derivative assembly was saved.
@@ -228,7 +250,10 @@ These are proposed next gates, not completed tests or permission to spend an unl
 - Current staged execution: `imagegen_triposg_workflow_20261015/execution_01`; generation and assembly occurred on 2026-10-16 local time. Earlier directory dates are experiment identifiers, not inferred execution timestamps.
 - Local evidence roots: `g3_leg_placement_01`, `g3_mattress_placement_01`, `g4_boards_01`, `g4_live_assembly_01`, and `Generated/artist_workflow_integration_20261016` under the repository. Historical per-stage reports retain their then-current stop statuses; this report explicitly records the later artist-authorized board continuation and trial assembly without retroactively passing G3.
 - The 35-file G0 experiment freeze remained intact through generation/assembly. Subsequent requested local program integration intentionally adds production modules/tests and changes panel routing; the earlier freeze claim does not extend to those later code edits. Source Bed/desk hashes still match. SceneMate and semantic-role research were outside scope.
-- This GitHub update publishes documentation, exact image-conditioning summaries, selected numeric evidence and ten figures. It does not publish source `.blend` assets, OBJ/GLB outputs, model weights, credentials, full logs or the uncommitted program changes.
-- Figures preserve their original pixels. Render PNG textual metadata was removed from publication copies to avoid exposing local paths; original/public hashes and unchanged compressed pixel-data hashes are listed in [figure_manifest.json](figure_manifest.json). Generated reference PNGs and the saved footboard model input are byte-identical copies. No visual retouching, defect removal or image regeneration was used for this report.
+- This GitHub update publishes documentation, exact image-conditioning summaries, selected numeric evidence and fourteen figures. It does not publish source `.blend` assets, OBJ/GLB outputs, model weights, credentials, full logs or the uncommitted program changes.
+- Figures preserve their original pixels. Render PNG textual metadata was removed from publication copies to avoid exposing local paths; original/public hashes and unchanged compressed pixel-data hashes are listed in [figure_manifest.json](figure_manifest.json). Generated reference PNGs, the saved footboard model input and all four artist-supplied screenshots are byte-identical copies. No visual retouching, defect removal or image regeneration was used for this report.
 
 The goal remains a complete, artist-approved assembly made from individually generated parts. The current evidence supports a working research loop and complete placement coverage, with specific remaining shape and interface failures that must be resolved before that goal is met.
+
+Documentation revision, 2026-10-16: four artist-supplied viewport screenshots and their observations added. No new generation, geometry modification, test-suite rerun or human review decision was performed for this revision. Existing source assets and uncommitted program code remain outside this publication.
+

@@ -8,7 +8,7 @@ Human-guided structural control for generative 3D asset workflows.
 
 ## Research reports
 
-- **[2026-10-16 ImageGen + Local TripoSG Workflow and Bed Results](docs/reviews/2026-10-16-imagegen-triposg-workflow/README.md)** — executed workflow, exact conditioning, ten evidence figures, seven placements, remaining shape/contact failures, program-integration checks and the GPT Image API direction
+- **[2026-10-16 ImageGen + Local TripoSG Workflow and Bed Results](docs/reviews/2026-10-16-imagegen-triposg-workflow/README.md)** — executed workflow, exact conditioning, fourteen evidence figures, including four artist-supplied Blender screenshots, seven placements, remaining shape/contact failures, program-integration checks and the GPT Image API direction
 - **[2026-10-15 Artist Assembly Review](docs/reviews/2026-10-15-rococo-bed/ARTIST_REVIEW.md)** — correct placement/scale still leaves wrong part semantics in the shown rococo Bed assembly; includes artist-supplied screenshots
 - **[Korean Research Report (국문)](docs/RESEARCH_PAPER_KO.md)** — design, experiments, limitations, and future work
 - **[English Research Report](docs/RESEARCH_PAPER_EN.md)** — English translation of the preliminary technical report
@@ -60,5 +60,6 @@ This is not production-ready.
 ## License
 
 Original Semantic Graybox source code in this repository is licensed under the MIT License. Third-party software, models, runtimes, and dependencies remain subject to their own licenses.
+
 
 
